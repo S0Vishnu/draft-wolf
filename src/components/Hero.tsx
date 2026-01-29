@@ -1,5 +1,6 @@
 import React from 'react';
 import { Download, Zap, FileText, ArrowRight } from 'lucide-react';
+import logoIcon from '../assets/icons/logo.png';
 
 export const Hero = () => {
     return (
@@ -55,8 +56,8 @@ export const Hero = () => {
                 <div className="hero__visual">
                     {/* The Prism */}
                     <div className="hero__prism">
-                        <div style={{ width: '4rem', height: '4rem', borderRadius: '50%', background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(168,85,247,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <span style={{ fontWeight: 'bold', fontSize: '1.5rem', background: 'linear-gradient(to top right, #c084fc, #22d3ee)', WebkitBackgroundClip: 'text', color: 'transparent' }}>W</span>
+                        <div style={{ width: '4rem', height: '4rem', borderRadius: '50%', background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(168,85,247,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                            <img src={logoIcon} alt="W" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                     </div>
 
