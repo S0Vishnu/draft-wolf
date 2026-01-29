@@ -1,4 +1,3 @@
-import React from 'react';
 import { Download, Zap, FileText, ArrowRight } from 'lucide-react';
 import logoIcon from '../assets/icons/logo.png';
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FileText } from 'lucide-react';
 
 export const TimeTravelSection = () => {

@@ -35,7 +35,7 @@ export const Footer = ({ onOpenLegal }: FooterProps) => {
                 </div>
 
                 <div className="footer__links">
-                    <p>© 2024 DraftWolf Inc.</p>
+                    <p>© 2026 DraftWolf Inc.</p>
                     <div className="footer__nav">
                         <button onClick={() => onOpenLegal('privacy')} className="footer__nav-item">Privacy</button>
                         <button onClick={() => onOpenLegal('terms')} className="footer__nav-item">Terms</button>

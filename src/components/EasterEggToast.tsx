@@ -1,4 +1,3 @@
-import React from 'react';
 import { RefreshCcw } from 'lucide-react';
 
 interface EasterEggToastProps {

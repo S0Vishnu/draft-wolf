@@ -1,4 +1,3 @@
-import React from 'react';
 import logoFull from '../assets/logo_full.svg';
 
 export const Navbar = () => {

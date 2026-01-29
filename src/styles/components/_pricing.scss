@@ -12,13 +12,17 @@
 .pricing__grid {
     display: grid;
     gap: 2rem;
-    max-width: 56rem;
+    align-items: stretch;
+    max-width: 80rem;
     margin: 0 auto;
 }
 
 .pricing-card {
     padding: 2rem;
     border-radius: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     transition: all 0.3s;
 }
 
@@ -39,11 +43,22 @@
     box-shadow: 0 0 50px rgba(168, 85, 247, 0.15);
 }
 
+.pricing-card--team {
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    background: rgba(8, 145, 178, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card--team:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 50px rgba(34, 211, 238, 0.15);
+}
+
 .pricing-card__badge {
     position: absolute;
     top: 0;
     right: 0;
-    background: linear-gradient(to left, #9333ea, #a855f7);
     color: white;
     font-size: 0.625rem;
     font-weight: bold;
@@ -51,4 +66,12 @@
     border-bottom-left-radius: 0.75rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+}
+
+.pricing-card__badge--pro {
+    background: linear-gradient(to left, #9333ea, #a855f7);
+}
+
+.pricing-card__badge--team {
+    background: linear-gradient(to left, #0891b2, #22d3ee);
 }
