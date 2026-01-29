@@ -1,0 +1,46 @@
+.font-mono {
+    font-family: var(--font-mono);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .md-flex {
+        display: flex;
+    }
+
+    .md-block {
+        display: block;
+    }
+
+    .md-grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .md-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Custom Colors mapping from React logic */
+.text-gray-400 {
+    color: #9ca3af;
+}
+
+.text-purple-400 {
+    color: #c084fc;
+}
+
+.text-cyan-400 {
+    color: #22d3ee;
+}
+
+.text-white {
+    color: white;
+}

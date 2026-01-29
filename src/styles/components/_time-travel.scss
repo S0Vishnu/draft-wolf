@@ -1,0 +1,223 @@
+.time-travel {
+    height: 300vh;
+    position: relative;
+    background: black;
+}
+
+.time-travel__sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.time-travel__bg {
+    position: absolute;
+    inset: 0;
+    transition: opacity 1s;
+}
+
+.time-travel__container {
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+@media (min-width: 1024px) {
+    .time-travel__container {
+        grid-template-columns: 4fr 8fr;
+    }
+}
+
+.time-travel__left-col {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.time-travel__headline {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.time-travel__timeline {
+    position: relative;
+    height: 300px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    margin-left: 0.5rem;
+    transform: translateY(-40px);
+}
+
+.time-travel__handle {
+    position: absolute;
+    left: -5px;
+    /* (1px border / 2) - (10px width / 2) roughly centered */
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.8);
+    /* Glow effect */
+    z-index: 2;
+}
+
+.time-travel__point {
+    position: absolute;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0.4;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #fff;
+    transition: opacity 0.3s;
+}
+
+.time-travel__point::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    /* Align with timeline line */
+    width: 6px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.time-travel__point--start {
+    top: 0;
+}
+
+.time-travel__point--edit {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.time-travel__point--final {
+    bottom: 0;
+}
+
+.time-travel__card {
+    background: rgba(10, 10, 10, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.25rem;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    position: relative;
+    min-height: 180px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+/* Inner glow for card */
+.time-travel__card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(168, 85, 247, 0.15), transparent 70%);
+    pointer-events: none;
+}
+
+.time-travel__card-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: block;
+    opacity: 0.8;
+}
+
+.time-travel__card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0.4rem;
+    margin-bottom: 1rem;
+    padding-top: 8px;
+    color: white;
+    letter-spacing: -0.02em;
+}
+
+.time-travel__card-desc {
+    font-size: 1rem;
+    color: #9ca3af;
+    line-height: 1.6;
+    font-weight: 300;
+    margin: 0;
+}
+
+.time-travel__preview {
+    position: relative;
+    width: 100%;
+    max-width: 46rem;
+    aspect-ratio: 16 / 10;
+    background: #0F1014;
+    /* Deep dark bg */
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5);
+    /* Strong shadow */
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.time-travel__window-bar {
+    height: 2.5rem;
+    background: #18191d;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 0.5rem;
+}
+
+.time-travel__dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+}
+
+.time-travel__window-title {
+    flex: 1;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.time-travel__preview--blur {
+    opacity: 0.5;
+    filter: blur(2px) grayscale(0.5);
+    transform: scale(0.98);
+}
+
+.time-travel__preview--normal {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+}
+
+.time-travel__preview--clear {
+    opacity: 1;
+    transform: scale(1.02);
+    box-shadow: 0 0 80px rgba(6, 182, 212, 0.2);
+}
