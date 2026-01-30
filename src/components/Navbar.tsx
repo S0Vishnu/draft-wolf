@@ -12,7 +12,7 @@ export const Navbar = () => {
         <nav className="navbar">
             <div className="navbar__container">
                 <div className="navbar__brand" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                    <img src={logoFull} alt="DraftWolf" style={{ height: '1.5rem' }} />
+                    <img src={logoFull} alt="DraftWolf" style={{ height: '1rem' }} />
                 </div>
                 <div className="navbar__links md-flex">
                     <button onClick={() => scrollToSection('features')} className="navbar__link navbar__link--cyan">
