@@ -19,18 +19,18 @@ export const Footer = ({ onOpenLegal }: FooterProps) => {
 
                 <div className="footer__buttons">
                     <button className="footer__btn footer__btn--white">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" style={{ width: '1.25rem', height: '1.25rem' }} alt="Apple" />
-                        Download for Mac
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2px' }}>
+                            {[...Array(4)].map((_, i) => <div key={i} style={{ width: '0.5rem', height: '0.5rem', background: 'black' }}></div>)}
+                        </div>
+                        Windows
                     </button>
                     <button className="footer__btn footer__btn--dark">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" style={{ width: '1.25rem', height: '1.25rem', filter: 'invert(1)' }} alt="Linux" />
                         Linux
                     </button>
                     <button className="footer__btn footer__btn--dark">
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2px' }}>
-                            {[...Array(4)].map((_, i) => <div key={i} style={{ width: '0.5rem', height: '0.5rem', background: 'white' }}></div>)}
-                        </div>
-                        Windows
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" style={{ width: '1.25rem', height: '1.25rem', filter: 'invert(1)' }} alt="Apple" />
+                        Download for Mac
                     </button>
                 </div>
 

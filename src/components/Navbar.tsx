@@ -14,7 +14,7 @@ export const Navbar = () => {
                 <div className="navbar__brand" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     <img src={logoFull} alt="DraftWolf" style={{ height: '1.5rem' }} />
                 </div>
-                <div className="navbar__links md-flex hidden">
+                <div className="navbar__links md-flex">
                     <button onClick={() => scrollToSection('features')} className="navbar__link navbar__link--cyan">
                         FEATURES
                         <span className="navbar__link-line"></span>

@@ -20,7 +20,7 @@ export const Hero = () => {
                     <h1 className="hero__title">
                         Stop lying to yourself about <br />
                         <span className="hero__gradient-text">
-                            'final_final_v2.docx'
+                            'final_final_v2.blend'
                         </span>
                     </h1>
 
@@ -30,7 +30,7 @@ export const Hero = () => {
 
                     <div className="hero__actions">
                         <button className="hero__btn hero__btn--primary">
-                            <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', position: 'relative', zIndex: 10 }}>
+                            <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', position: 'relative', zIndex: 10, pointerEvents: 'none' }}>
                                 Download Beta <Download size={18} />
                             </span>
                         </button>

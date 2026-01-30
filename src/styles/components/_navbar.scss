@@ -48,7 +48,7 @@
 }
 
 .navbar__links {
-    display: none;
+    display: flex;
     gap: 2rem;
     font-family: var(--font-mono);
     font-size: 0.875rem;
