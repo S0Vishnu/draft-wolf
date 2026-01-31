@@ -31,11 +31,15 @@
 }
 
 .feature-card--interactive:hover {
-    transform: translateY(-1rem) rotate(1deg);
+    transform: translateY(-1rem);
 }
 
 .feature-card--interactive-reverse:hover {
     transform: translateY(-1rem) rotate(-1deg);
+}
+
+.feature-card--interactive-reverse-negative:hover {
+    transform: translateY(-1rem) rotate(1deg);
 }
 
 .feature-card__icon {

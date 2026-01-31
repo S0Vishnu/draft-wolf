@@ -10,7 +10,7 @@ export const Features = () => (
             <div className="features__grid md-grid-3">
 
                 {/* Card 1: Multiverse */}
-                <div className="feature-card">
+                <div className="feature-card feature-card--interactive-reverse-negative">
                     <div className="feature-card__icon">
                         <GitCommit size={48} />
                     </div>
