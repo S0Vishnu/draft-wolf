@@ -1,4 +1,5 @@
 import React from 'react';
+import { WINDOWS_DOWNLOAD_LINK } from '../constants/downloadLinks';
 
 interface FooterProps {
     onOpenLegal: (type: 'privacy' | 'terms') => void;
@@ -18,17 +19,22 @@ export const Footer = ({ onOpenLegal }: FooterProps) => {
                 </h2>
 
                 <div className="footer__buttons">
-                    <button className="footer__btn footer__btn--white">
+                    <a
+                        href={WINDOWS_DOWNLOAD_LINK}
+                        download
+                        className="footer__btn footer__btn--white"
+                        style={{ textDecoration: 'none', color: 'inherit' }}
+                    >
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2px' }}>
                             {[...Array(4)].map((_, i) => <div key={i} style={{ width: '0.5rem', height: '0.5rem', background: 'black' }}></div>)}
                         </div>
                         Windows
-                    </button>
-                    <button className="footer__btn footer__btn--dark">
+                    </a>
+                    <button type="button" className="footer__btn footer__btn--dark" title="Coming soon" disabled aria-label="Linux – Coming soon">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" style={{ width: '1.25rem', height: '1.25rem', filter: 'invert(1)' }} alt="Linux" />
                         Linux
                     </button>
-                    <button className="footer__btn footer__btn--dark">
+                    <button type="button" className="footer__btn footer__btn--dark" title="Coming soon" disabled aria-label="Mac – Coming soon">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" style={{ width: '1.25rem', height: '1.25rem', filter: 'invert(1)' }} alt="Apple" />
                         Download for Mac
                     </button>

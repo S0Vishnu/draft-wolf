@@ -1,5 +1,6 @@
 import { Download, Zap, FileText, ArrowRight } from 'lucide-react';
 import logoIcon from '../assets/icons/logo.png';
+import { WINDOWS_DOWNLOAD_LINK } from '../constants/downloadLinks';
 
 export const Hero = () => {
     return (
@@ -29,11 +30,16 @@ export const Hero = () => {
                     </p>
 
                     <div className="hero__actions">
-                        <button className="hero__btn hero__btn--primary">
-                            <span className="hero__btn-content">
+                        <a
+                            href={WINDOWS_DOWNLOAD_LINK}
+                            download
+                            className="hero__btn hero__btn--primary"
+                            style={{ textDecoration: 'none', color: 'inherit' }}
+                        >
+                            <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', position: 'relative', zIndex: 10, pointerEvents: 'none' }}>
                                 Download Beta <Download size={18} />
                             </span>
-                        </button>
+                        </a>
                         <button className="hero__btn hero__btn--secondary">
                             See the Magic <Zap size={18} className="hero__magic-icon" />
                         </button>
