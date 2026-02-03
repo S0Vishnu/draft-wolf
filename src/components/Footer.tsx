@@ -23,7 +23,7 @@ export const Footer = ({ onOpenLegal }: FooterProps) => {
                         href={WINDOWS_DOWNLOAD_LINK}
                         download
                         className="footer__btn footer__btn--white"
-                        style={{ textDecoration: 'none', color: 'inherit' }}
+                        style={{ textDecoration: 'none' }}
                     >
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2px' }}>
                             {[...Array(4)].map((_, i) => <div key={i} style={{ width: '0.5rem', height: '0.5rem', background: 'black' }}></div>)}

@@ -34,7 +34,7 @@ export const Hero = () => {
                             href={WINDOWS_DOWNLOAD_LINK}
                             download
                             className="hero__btn hero__btn--primary"
-                            style={{ textDecoration: 'none', color: 'inherit' }}
+                            style={{ textDecoration: 'none' }}
                         >
                             <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', position: 'relative', zIndex: 10, pointerEvents: 'none' }}>
                                 Download Beta <Download size={18} />
