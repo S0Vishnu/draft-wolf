@@ -30,18 +30,24 @@ export const Footer = ({ onOpenLegal }: FooterProps) => {
                         </div>
                         Windows
                     </a>
-                    <button type="button" className="footer__btn footer__btn--dark" title="Coming soon" disabled aria-label="Linux – Coming soon">
+                    <button type="button" className="footer__btn footer__btn--dark" disabled style={{ opacity: 0.7, cursor: 'not-allowed' }}>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" style={{ width: '1.25rem', height: '1.25rem', filter: 'invert(1)' }} alt="Linux" />
-                        Linux
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', lineHeight: '1.1', textAlign: 'left' }}>
+                            <span>Linux</span>
+                            <span style={{ fontSize: '0.75rem', opacity: 0.6, fontWeight: 'normal' }}>Coming Soon</span>
+                        </div>
                     </button>
-                    <button type="button" className="footer__btn footer__btn--dark" title="Coming soon" disabled aria-label="Mac – Coming soon">
+                    <button type="button" className="footer__btn footer__btn--dark" disabled style={{ opacity: 0.7, cursor: 'not-allowed' }}>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" style={{ width: '1.25rem', height: '1.25rem', filter: 'invert(1)' }} alt="Apple" />
-                        Download for Mac
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', lineHeight: '1.1', textAlign: 'left' }}>
+                            <span>Mac</span>
+                            <span style={{ fontSize: '0.75rem', opacity: 0.6, fontWeight: 'normal' }}>Coming Soon</span>
+                        </div>
                     </button>
                 </div>
 
                 <div className="footer__links">
-                    <p>© 2026 DraftWolf Inc.</p>
+                    <p>© 2026 S0Vishnu.</p>
                     <div className="footer__nav">
                         <button onClick={() => onOpenLegal('privacy')} className="footer__nav-item">Privacy</button>
                         <button onClick={() => onOpenLegal('terms')} className="footer__nav-item">Terms</button>

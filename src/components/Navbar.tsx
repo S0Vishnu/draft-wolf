@@ -1,4 +1,5 @@
 import logoFull from '../assets/logo_full.svg';
+import { WINDOWS_DOWNLOAD_LINK } from '../constants/downloadLinks';
 
 export const Navbar = () => {
     const scrollToSection = (id: string) => {
@@ -28,9 +29,9 @@ export const Navbar = () => {
                         <span className="navbar__link-line"></span>
                     </button>
                 </div>
-                <button className="navbar__cta">
+                <a href={WINDOWS_DOWNLOAD_LINK} download className="navbar__cta" style={{ textDecoration: 'none' }}>
                     Get Early Access
-                </button>
+                </a>
             </div>
         </nav>
     );

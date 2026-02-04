@@ -72,7 +72,8 @@ export const Pricing = () => {
                     </div>
 
                     {/* Pro Tier */}
-                    <div className="pricing-card pricing-card--pro">
+                    {/* Pro Tier - Coming Soon */}
+                    <div className="pricing-card pricing-card--pro" style={{ position: 'relative' }}>
                         <div className="pricing-card__badge pricing-card__badge--pro">Most Popular</div>
 
                         <h3 className="font-mono text-purple-400" style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>The Alpha</h3>
@@ -89,12 +90,28 @@ export const Pricing = () => {
                             <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><div style={{ width: '0.375rem', height: '0.375rem', background: '#c084fc', borderRadius: '50%' }} /> Smart Diffing (PSD, AI, DOCX)</li>
                         </ul>
                         <div style={{ marginTop: '2rem' }}>
-                            <button className="footer__btn" style={{ width: '100%', background: 'linear-gradient(to right, #9333ea, #a855f7)', border: 'none', color: 'white', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Start 14-Day Trial</button>
+                            <button
+                                className="footer__btn"
+                                disabled
+                                style={{
+                                    width: '100%',
+                                    background: 'linear-gradient(to right, #9333ea, #a855f7)',
+                                    border: 'none',
+                                    color: 'white',
+                                    textTransform: 'uppercase',
+                                    fontSize: '0.875rem',
+                                    letterSpacing: '0.05em',
+                                    opacity: 0.6,
+                                    cursor: 'not-allowed'
+                                }}
+                            >
+                                Coming Soon
+                            </button>
                         </div>
                     </div>
 
-                    {/* Team Tier (New) */}
-                    <div className="pricing-card pricing-card--team">
+                    {/* Team Tier (New) - Coming Soon */}
+                    <div className="pricing-card pricing-card--team" style={{ position: 'relative' }}>
                         <div className="pricing-card__badge pricing-card__badge--team">Best Value</div>
                         <h3 className="font-mono text-cyan-400" style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>The Wolf Pack</h3>
                         <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem', marginBottom: '1.5rem' }}>
@@ -110,7 +127,23 @@ export const Pricing = () => {
                             <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><div style={{ width: '0.375rem', height: '0.375rem', background: '#22d3ee', borderRadius: '50%' }} /> Priority 24/7 Support</li>
                         </ul>
                         <div style={{ marginTop: '2rem' }}>
-                            <button className="footer__btn" style={{ width: '100%', background: 'linear-gradient(to right, #0891b2, #22d3ee)', border: 'none', color: 'white', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Contact Sales</button>
+                            <button
+                                className="footer__btn"
+                                disabled
+                                style={{
+                                    width: '100%',
+                                    background: 'linear-gradient(to right, #0891b2, #22d3ee)',
+                                    border: 'none',
+                                    color: 'white',
+                                    textTransform: 'uppercase',
+                                    fontSize: '0.875rem',
+                                    letterSpacing: '0.05em',
+                                    opacity: 0.6,
+                                    cursor: 'not-allowed'
+                                }}
+                            >
+                                Coming Soon
+                            </button>
                         </div>
                     </div>
                 </div>

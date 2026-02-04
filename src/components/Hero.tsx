@@ -1,5 +1,6 @@
 import { Download, Zap, FileText, ArrowRight } from 'lucide-react';
 import logoIcon from '../assets/icons/logo.png';
+import confetti from 'canvas-confetti';
 import { WINDOWS_DOWNLOAD_LINK } from '../constants/downloadLinks';
 
 export const Hero = () => {
@@ -40,7 +41,17 @@ export const Hero = () => {
                                 Download Beta <Download size={18} />
                             </span>
                         </a>
-                        <button className="hero__btn hero__btn--secondary">
+                        <button
+                            className="hero__btn hero__btn--secondary"
+                            onClick={() => {
+                                confetti({
+                                    particleCount: 100,
+                                    spread: 70,
+                                    origin: { y: 0.6 },
+                                    colors: ['#FF1CF7', '#00F0FF', '#ffffff']
+                                });
+                            }}
+                        >
                             See the Magic <Zap size={18} className="hero__magic-icon" />
                         </button>
                     </div>
